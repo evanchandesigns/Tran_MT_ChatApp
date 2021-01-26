@@ -4,9 +4,9 @@
   "description": "a fun node build",
   "main": "app.js",
   "scripts": {
-    "start-dev": "nodemon app",
-    "watch": "browser-sync start --proxy 'localhost:5050' --files '*.html' 'public'",
-    "dev": "(cd server && npm run start-dev) && npm run watch",
+    "nodemon": "nodemon app",
+    "browsersync": "browser-sync start --proxy 'localhost:5050' --files '*.html' 'public'",
+    "start-dev": "npm-run-all --parallel nodemon browsersync",
     "start": "node app"
   },
   "keywords": [],
