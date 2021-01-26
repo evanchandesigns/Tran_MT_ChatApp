@@ -1,0 +1,19 @@
+{
+  "name": "mttchatapp",
+  "version": "1.0.0",
+  "description": "a fun node build",
+  "main": "app.js",
+  "scripts": {
+    "start-dev": "nodemon app",
+    "watch": "browser-sync start --proxy 'localhost:5050' --files '*.html' 'public'",
+    "dev": "(cd server && npm run start-dev) && npm run watch",
+    "start": "node app"
+  },
+  "keywords": [],
+  "author": "Evan Chan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.1.0"
+  }
+}
